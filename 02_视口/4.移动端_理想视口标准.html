@@ -5,26 +5,25 @@
 	<title>移动端_理想视口标准</title>
 	<meta name="viewport" content="width=device-width">
 	<style>	
-	/* 	*{
+		*{
 			margin: 0;
 			padding: 0;
 		}
 		#demo{
-			width: 980px;
+			width:414px;
 			height: 200px;
 			background-color: skyblue;
-			font-size: 40px;
-		} */
+		}
 	</style>
 </head>
 <body>
-	<!-- <div id="demo"></div> -->
+	<div id="demo"></div>
 	<script type="text/javascript" >
 		console.log('布局视口宽度为：',document.documentElement.clientWidth);
-		// console.log('视觉视口宽度为：',window.innerWidth);
-		// const demo = document.getElementById('demo')
-		// demo.innerHTML = '当前设备的布局视口宽度为'+ document.documentElement.clientWidth+'px（css）'+'<br/>'
-		// demo.innerHTML += '当前设备的视觉视口宽度为'+ window.innerWidth+'px（css）'
+		console.log('视觉视口宽度为：',window.innerWidth);
+		const demo = document.getElementById('demo')
+		demo.innerHTML = '当前设备的布局视口宽度为'+ document.documentElement.clientWidth+'px（css）'+'<br/>'
+		demo.innerHTML += '当前设备的视觉视口宽度为'+ window.innerWidth+'px（css）'
 	</script>
 </body>
 </html>
