@@ -24,15 +24,15 @@
 		},3000) */
 		const demo = document.getElementById('demo')
 		//手指触摸事件
-		demo.addEventListener('touchstart',(event)=>{
+		demo.addEventListener('touchstart',()=>{
 			console.log('你触摸我了---touchstart');
 		})
 		//手指滑动事件
-		demo.addEventListener('touchmove',(event)=>{
+		demo.addEventListener('touchmove',()=>{
 			console.log('你在我表面移动了---touchmove');
 		})
 		//触摸结束事件
-		demo.addEventListener('touchend',(event)=>{
+		demo.addEventListener('touchend',()=>{
 			console.log('你抬起手指了---touchend');
 		})
 		//触摸被打断事件

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no">
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		#demo{
+			width: 100%;
+			height: 200px;
+			background-color: orange;
+		}
+	</style>
+	<title>移动端事件</title>
+</head>
+<body>
+	<div id="demo"></div>
+	<script type="text/javascript" >
+		/* setTimeout(()=>{
+			alert(1)
+		},3000) */
+		const demo = document.getElementById('demo')
+
+		/* 
+			event事件对象中常用属性：
+					1.屏幕上所有的触点信息touches
+					2.当前元素上的所有触点信息targetTouches
+					3.改变了的触点信息changedTouches
+		 */
+
+		//手指触摸事件
+		demo.addEventListener('touchstart',(event)=>{
+			event.preventDefault()
+			console.log('你触摸我了---touchstart');
+			demo.innerHTML = '屏幕上的触点数为：'+event.touches.length + '<br/>'
+			demo.innerHTML += '橙色盒子上的触点数为：'+event.targetTouches.length + '<br/>'
+			demo.innerHTML += '橙色盒子上同时按下的触点数：'+event.changedTouches.length
+		})
+		//手指滑动事件
+		demo.addEventListener('touchmove',()=>{
+			// console.log('你在我表面移动了---touchmove');
+			// demo.innerHTML = '屏幕上的触点数为：'+event.touches.length + '<br/>'
+			// demo.innerHTML += '橙色盒子上的触点数为：'+event.targetTouches.length + '<br/>'
+			// demo.innerHTML += '橙色盒子上同时移动的触点数：'+event.changedTouches.length
+		})
+		//触摸结束事件
+		demo.addEventListener('touchend',()=>{
+			// console.log('你抬起手指了---touchend');
+			// demo.innerHTML = '屏幕上的触点数为：'+event.touches.length + '<br/>'
+			// demo.innerHTML += '橙色盒子上的触点数为：'+event.targetTouches.length + '<br/>'
+			// demo.innerHTML += '橙色盒子上同时抬起的触点数：'+event.changedTouches.length
+		})
+		//触摸被打断事件
+		demo.addEventListener('touchcancel',()=>{
+			console.log('触摸被打断了---touchend');
+		})
+	</script>
+</body>
+</html>
