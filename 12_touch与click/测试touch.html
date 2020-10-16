@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>touch与click</title>
+	<!-- <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no"> -->
+	<style>
+		#btn{
+			width: 300px;
+			height: 200px;
+		}
+	</style>
+</head>
+<body>
+	<button id="btn">点我</button>
+	<div id="info"></div>
+	<script type="text/javascript" >
+		const btn = document.getElementById('btn')
+		const info = document.getElementById('info')
+		let time
+		btn.addEventListener('click',()=>{
+			console.log('你点击我了');
+			info.innerHTML = Date.now()-time
+		})
+		btn.addEventListener('touchstart',()=>{
+			console.log('你触摸我了');
+			time = Date.now()
+		})
+		
+	</script>
+</body>
+</html>
