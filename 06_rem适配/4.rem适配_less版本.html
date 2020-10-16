@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>rem适配方案二_less</title>
+	<meta name="viewport" content="width=device-width,initial-scale=1.0, maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+	<link rel="stylesheet" href="./css/index.css">
+</head>
+<body>
+	<div id="demo"></div>
+	<script type="text/javascript" >
+			function adapter(){
+				//1.获取设备横向设备独立像素值
+				const dpWidth = document.documentElement.clientWidth
+				//2.计算根字体大小
+				const rootFontSize = dpWidth/10
+				//3.设置根字体大小
+				document.documentElement.style.fontSize = rootFontSize + 'px'
+			}
+			adapter()
+			window.onresize = adapter
+
+	</script>
+</body>
+</html>
